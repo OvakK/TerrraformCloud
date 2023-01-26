@@ -97,7 +97,6 @@ resource "aws_instance" "my_ubuntu_server" {
   user_data              = file("Instal.sh")
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
   subnet_id              = aws_subnet.my_subnet.id
-  key_name               = aws_key_pair.key1.key_name
 
 }
 
