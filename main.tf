@@ -77,11 +77,6 @@ resource "aws_security_group" "allow_tls" {
   }
 }
 
-resource "aws_key_pair" "key1" {
-  key_name   = "Mykey"
-  public_key = file("mykeyssh.pub")
-
-}
 
 resource "aws_network_interface" "test" {
   subnet_id       = aws_subnet.my_subnet.id
